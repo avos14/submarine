@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,maximum-scale=1">
+	<title>submarine Adam Vos ID 204804157</title>
+	<meta name="description" content="Battleboat.js: A JavaScript AI that beats humans at battleship.">
+	<link rel="icon" type="image/png" href="img/favicon.png" />
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" media="all"/>
+	<link href="css/styles.css" rel="stylesheet" media="all"/>
+<!--	https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/fonts/fontawesome-webfont.woff2?v=4.5.0-->
+</head>
+<body>
+<div class="congrats">
+</div>
+<div id="avos" class="container">
+	<h2>How to play</h2>
+	<ol class="instructions">
+		<li id="step1">Select your ships from the left-hand side.</li>
+		<li id="step2">Place your ships on the map called "Your Fleet" and click "Start Game" or click "Place Randomly and Start".</li>
+		<li id="step3">Click on the cells of the enemy's map called "Enemy Fleet" to find and destroy all five enemy ships.</li>
+		<li id="step4">The computer will fire on your ships immediately after you fire on its ships.</li>
+	</ol>
+	<h2>Special functions</h2>
+	<ol class="instructions">
+		<li id="1">You can place your ships randomly or one-by-one.</li>
+		<li id="2">You can rotate the ship.(Click the ship, click Rotate Ship, place ship on map)</li>
+		<li id="3">you can choose which size of board you want to play on.</li>
+		<li id="4">You can cheat.</li>
+		<li id="5">You can save and load.</li>
+
+	</ol>
+	<div  class="game-container">
+		<div id="cheat-sidebar" class="hidden">
+			<button id="cheat">Show Enemy Fleet</button>
+			<button id="saveGame">Save Game</button>
+		</div>
+		<div id="restart-sidebar" class="hidden">
+			<h2>Try Again</h2>
+			<button id="restart-game">Restart Game</button>
+		</div>
+		<div id="roster-sidebar">
+		<label for="size"><b>Board size:</b></label><br>
+		<input type="text" id="size" name="size" value="10" style="width: 100px"><br>
+		<button type="button" id="resizeButton">Resize</button>
+			<button type="button" id="loadGame">Load Game</button>
+			<h2>Place Your Ships</h2>
+			<ul class="fleet-roster">
+				<li id="patrolboat">Patrol Boat</li>
+				<li id="submarine">Submarine</li>
+				<li id="destroyer">Destroyer</li>
+				<li id="battleship">Battleship</li>
+				<li id="carrier">Aircraft Carrier</li>
+			</ul>
+			<button id="rotate-button" data-direction="1">Rotate Ship</button>
+			<button id="start-game" class="hidden">Start Game</button>
+			<button id="place-randomly" class="hidden">Place Randomly and Start</button>
+
+		</div>
+		<div class="grid-container" id="humanfleet">
+			<h2>Your Fleet</h2>
+			<div class="grid human-player" id="humanfleetinner"><span class="no-js">Please enable JavaScript to play this game.</span></div>
+		</div>
+		<div class="grid-container" id="computerfleet">
+			<h2>Enemy Fleet</h2>
+			<div class="grid computer-player" id="computerfleetinner"><span class="no-js">Please enable JavaScript to play this game.</span></div>
+		</div>
+	</div>
+	
+</div>
+
+
+
+<script>
+// Don't change this variable.
+var DEBUG_MODE = 1;
+// To turn DEBUG_MODE on, run `setDebug(true);` in the console.
+
+</script>
+
+<script src="js/battleboat.js"></script>
+</body>
+</html>
